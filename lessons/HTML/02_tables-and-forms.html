@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tables & Forms</title>
+</head>
+<body>
+    <hr><hr>
+    <h2>Tables</h2>
+    <hr><hr>
+    <table>
+        <tr>
+            <th>Name</th>
+            <th>Class</th>
+            <th>Roll No.</th>
+        </tr>
+        <tr>
+            <td>John</td>
+            <td>11</td>
+            <td>56676</td>
+        </tr>
+        <tr>
+            <td>Bob</td>
+            <td>09</td>
+            <td>58976</td>
+        </tr>
+        <tr>
+            <td>Alice</td>
+            <td>12</td>
+            <td>56096</td>
+        </tr>
+    </table>
+    <hr>
+
+    <hr>
+    <h2>Forms</h2>
+    <hr><hr>
+    <form action="get">  <!-- Two methods: get , post -->
+        <label for="username">
+            username:
+            <input type="email" name="username">
+        </label>
+        <br>
+        <label for="password">
+            password:
+            <input type="password" name="password">
+        </label>
+        <br>
+        <label for="content">
+            Message:
+            <textarea name="Message" id="#" placeholder="Send Message"></textarea>
+        </label>
+        <br>
+        <label for="#">
+            Gender:
+            <input type="radio" name="Male" id="#">Male
+            <input type="radio" name="Female" id="#">Female
+            <input type="radio" name="Other" id="#">Other
+        </label>
+        <br>
+        <label for="#">
+            DOB:
+            <input type="date">
+        </label>
+        <br>
+        <label for="#">
+            Resume:
+            <input type="file">
+        </label>
+        <br>
+        <label for="#">
+            Roles:
+            <select name="Roles" id="#">
+                <option value="">Web</option>
+                <option value="">Design</option>
+                <option value="">App</option>
+            </select>
+        </label>
+        <br>
+        <label for="#">
+            <input type="checkbox" name="checkbox" id="#">
+            I Agree to the T&C.
+        </label>
+        <br>
+        <button type="submit">Submit</button>
+        <button type="reset">Reset</button>
+    </form>
+
+    <hr><hr>
+    <h2>Progress Bars</h2>
+    <hr><hr>
+    <progress max="100" value="15"></progress>
+    <progress max="100" value="48"></progress>
+    <progress max="100" value="86"></progress>
+    <progress max="100"></progress>
+    <hr>
+</body>
+</html>
