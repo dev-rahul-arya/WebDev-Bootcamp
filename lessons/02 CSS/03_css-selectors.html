@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CSS Selectors</title>
+    
+    <style>
+        /* 1. Universal Selector */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        /* 2. Type Selector */
+        body {
+            color: white;
+            background-color: black;
+        }
+
+        /* 3. Class Selector  */
+        .container {
+            display: flex;
+        }
+
+        /* 4. Id Selector  */
+        #container {
+            margin: 10px 20px 20px 15px; /* top right bottom left */
+        }
+
+        /* 5. Attribute Selector  */
+        input[type="email"] {
+            border: 2px solid red;
+        }
+
+        /* 6. Descendent Selector  */
+        .container input {
+            padding: 15px;
+        }
+
+        /* 7. Child Selector  */
+        ul > li {
+            cursor: pointer;
+        }
+
+        /* 8. Adjacent Sibling Selector  */
+        h1 + p {
+
+        }
+
+        /* 9. General Sibling Selector  */
+        h1 ~ p {
+
+        }
+
+        /* 10. Pseudo-Class Selector  */
+        li:hover {
+            color: red;
+        }
+
+        /* 11. Pseudo-Element Selector  */
+        p::first-letter {
+            font-weight: 800;
+        }
+        
+        /* 12. Grouping Selector */
+        h1, p, h3 {
+            
+        }
+        </style>
+
+</head>
+<body>
+    <div id="container" class="container">
+        <input type="email" name="" id="">
+        <ul>
+            <li>ONE</li>
+            <li>TWO</li>
+            <li>THREE</li>
+        </ul>
+    </div>
+
+    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quae maxime quaerat ad recusandae possimus debitis, asperiores delectus, velit eos ea dignissimos deserunt eum quo nemo odio eaque nam voluptatibus saepe voluptatem minus doloremque voluptates illum. Tempora maxime accusantium vitae voluptas repudiandae modi magni ducimus quam hic cupiditate ullam iusto, aut repellat esse!</p>
+</body>
+</html>

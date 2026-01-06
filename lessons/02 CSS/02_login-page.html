@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login</title>
+
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            background-color: rgb(0, 0, 0);
+            display: flex;
+            height: 100vh;
+            align-items: center;
+            justify-content: center;
+        }
+
+        .container {
+            width: 400px;
+            height: 300px;
+            background-color: rgb(224, 132, 20);
+            border-radius: 10px;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+        }
+
+        h1 {
+            text-align: center;
+            margin-bottom: 30px;
+        }
+
+        .form {
+            display: flex;
+            flex-direction: column;
+            gap: 3px;
+        }
+
+        .form label {
+            display: flex;
+            flex-direction: column;
+            width: 60vw;
+        }
+
+        .form label input {
+            padding: 10px;
+            border: 1px solid black;
+            border-radius: 5px;
+        }
+
+        .submit-btn {
+            width: 50%;
+            /* margin-left: 25%; */
+            margin: auto;
+        }
+
+        .submit-btn:hover {
+            color: white;
+            background-color: black;
+            cursor: pointer;
+            width: 100%;
+            transition: all 0.3s ease-in-out;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="container">
+        <form action="post" class="form">
+            <h1>Login</h1>
+            <label for="username">
+                <input type="email" placeholder="Username">
+            </label>
+            <label for="password">
+                <input type="password" placeholder="Password">
+            </label>
+            <label for="submit">
+                <input type="submit" value="Submit" class="submit-btn">
+            </label>
+        </form>
+    </div>
+</body>
+
+</html>
