@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Shopping Card</title>
+
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: ubuntu;
+        }
+
+        body {
+            background-color: #333;
+            display: flex;
+            height: 100vh;
+            align-items: center;
+            justify-content: center
+        }
+
+        .card-container {
+            height: 400px;
+            width: 300px;
+            margin: auto;
+        }
+
+        .card {
+            height: 100%;
+            width: 100%;
+            margin: auto;
+            background-color: aliceblue;
+            border-radius: 10px;
+            padding: 0px 10px;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+        }
+
+        .product-img {
+            height: 60%;
+            width: 100%;
+            margin: 13px auto;
+            border-radius: 10px;
+        }
+
+        .btn {
+            display: flex;
+            justify-content: space-around;
+            align-items: center;
+            padding: 12px;
+            width: 100%;
+        }
+
+        .btn button {
+            padding: 16px;
+            border: 0.5px solid rgb(212, 228, 241);
+            border-radius: 19px;
+            cursor: pointer;
+            transition: all 0.3s ease-in-out;
+        }
+
+        .btn button:hover {
+            border: 1.5px solid rgb(208, 232, 252);
+            background-color: rgb(253, 206, 159);
+            color: rgb(94, 40, 5);
+        }
+    </style>
+</head>
+
+<body>
+    <div class="card-container">
+        <div class="card">
+            <img src="../assets/img/shoes.jpg" alt="Shoes" class="product-img">
+            <h3>Sports Shoe</h3>
+            <p>A normal sports shoe.</p>
+            <div class="btn">
+                <h4>$199 </h4>
+                <button class="cart-btn">Add to Cart</button>
+                <button class="buy-btn">Buy Now</button>
+            </div>
+        </div>
+    </div>
+</body>
+
+</html>
