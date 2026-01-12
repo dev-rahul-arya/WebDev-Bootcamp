@@ -1,0 +1,188 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bootstrap Site</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css">
+
+    <style>
+        body {
+            background-color: #333;
+        }
+
+        .nav-container {
+            position: sticky;
+            top: 0;
+            z-index: 1;
+        }
+
+        .card-container {
+            display: flex;
+            justify-content: center;
+            margin: 8px;
+            gap: 12px;
+        }
+
+        .card {
+            transition: all 0.2s ease-in-out;
+        }
+
+        .card:hover {
+            transform: scale(1.05);
+        }
+
+        .title {
+            font-size: 32px;
+            color: #fff;
+            text-align: center;
+            line-height: 88px;
+        }
+
+        .carousel-item img {
+            opacity: 60%;
+        }
+
+        .footer-container {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            color: #fff;
+        }
+
+        .footer-container hr {
+            color: #fff;
+            width: 80%;
+        }
+
+        @media (max-width: 768px) {
+            .card-container {
+                flex-direction: column;
+                align-items: center;
+                justify-content: center;
+            }
+
+            .card {
+                width: auto !important;
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <div class="nav-container">
+        <nav class="navbar navbar-expand-lg bg-body-tertiary">
+            <div class="container-fluid">
+                <a class="navbar-brand" href="#">MySite</a>
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
+                    data-bs-target="#navbarTogglerDemo02" aria-controls="navbarTogglerDemo02" aria-expanded="false"
+                    aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                <div class="collapse navbar-collapse" id="navbarTogglerDemo02">
+                    <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+                        <li class="nav-item">
+                            <a class="nav-link active" aria-current="page" href="#">Home</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="#">About</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="#">Contact</a>
+                        </li>
+                    </ul>
+                    <form class="d-flex" role="search">
+                        <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search" />
+                        <button class="btn btn-outline-primary" type="submit">Search</button>
+                    </form>
+                </div>
+            </div>
+        </nav>
+    </div>
+
+    <div class="carousel-container">
+        <div id="carouselExampleIndicators" class="carousel slide">
+            <div class="carousel-indicators">
+                <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="0" class="active"
+                    aria-current="true" aria-label="Slide 1"></button>
+                <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="1"
+                    aria-label="Slide 2"></button>
+                <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="2"
+                    aria-label="Slide 3"></button>
+            </div>
+            <div class="carousel-inner">
+                <div class="carousel-item active">
+                    <img src="https://images.pexels.com/photos/3532542/pexels-photo-3532542.jpeg" class="d-block w-100"
+                        alt="...">
+                </div>
+                <div class="carousel-item">
+                    <img src="https://images.pexels.com/photos/3532541/pexels-photo-3532541.jpeg" class="d-block w-100"
+                        alt="...">
+                </div>
+                <div class="carousel-item">
+                    <img src="https://images.pexels.com/photos/3532543/pexels-photo-3532543.jpeg" class="d-block w-100"
+                        alt="...">
+                </div>
+            </div>
+            <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleIndicators"
+                data-bs-slide="prev">
+                <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                <span class="visually-hidden">Previous</span>
+            </button>
+            <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleIndicators"
+                data-bs-slide="next">
+                <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                <span class="visually-hidden">Next</span>
+            </button>
+        </div>
+    </div>
+
+    <h2 class="title">Videos</h2>
+
+    <div class="card-container">
+        <div class="card" style="width: 18rem;">
+            <img src="https://i.ytimg.com/vi/sscX432bMZo/hqdefault.jpg?sqp=-oaymwEnCNACELwBSFryq4qpAxkIARUAAIhCGAHYAQHiAQoIGBACGAY4AUAB&rs=AOn4CLDBd2ycURKkXkiW6AO00Ss5HpG0BQ"
+                class="card-img-top" alt="...">
+            <div class="card-body">
+                <h5 class="card-title">JS in OneShot</h5>
+                <p class="card-text">Master JavaScript fundamentals in one comprehensive tutorial. Learn variables,
+                    functions, async programming, and DOM manipulation from scratch.</p>
+                <a href="https://www.youtube.com/watch?v=sscX432bMZo" class="btn btn-danger" target="_blank">Watch Now
+                    &RightArrowBar;</a>
+            </div>
+        </div>
+        <div class="card" style="width: 18rem;">
+            <img src="https://i.ytimg.com/vi/vz1RlUyrc3w/hqdefault.jpg?sqp=-oaymwEnCNACELwBSFryq4qpAxkIARUAAIhCGAHYAQHiAQoIGBACGAY4AUAB&rs=AOn4CLB0PUOqLfkxyNfZWp24zSw0LiFNdQ"
+                class="card-img-top" alt="...">
+            <div class="card-body">
+                <h5 class="card-title">ReactJS Roadmap</h5>
+                <p class="card-text">Complete React learning path covering components, hooks, state management, and best
+                    practices. Perfect for building modern web applications.</p>
+                <a href="https://www.youtube.com/watch?v=vz1RlUyrc3w" class="btn btn-danger" target="_blank">Watch Now
+                    &RightArrowBar;</a>
+            </div>
+        </div>
+        <div class="card" style="width: 18rem;">
+            <img src="https://i.ytimg.com/vi/q8EevlEpQ2A/hqdefault.jpg?sqp=-oaymwEnCNACELwBSFryq4qpAxkIARUAAIhCGAHYAQHiAQoIGBACGAY4AUAB&rs=AOn4CLB0sN8iKIM5ABj4AkhrcSBbhhFo1Q"
+                class="card-img-top" alt="...">
+            <div class="card-body">
+                <h5 class="card-title">Git & Github OneShot</h5>
+                <p class="card-text">Learn version control essentials with Git and GitHub. Master branching, commits,
+                    pull requests, and collaborative development workflows.</p>
+                <a href="https://www.youtube.com/watch?v=q8EevlEpQ2A" class="btn btn-danger" target="_blank">Watch Now
+                    &RightArrowBar;</a>
+            </div>
+        </div>
+    </div>
+
+    <div class="footer-container">
+        <hr>
+        <p>&copy; MySite 2026</p>
+    </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+
+</html>

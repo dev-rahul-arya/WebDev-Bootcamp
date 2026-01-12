@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tailwind</title>
+    <link rel="stylesheet" href="output.css">
+
+    <style>
+        
+    </style>
+</head>
+
+<body>
+    <!-- Steps:
+    1. CDN way
+        -Just like bootstrap
+        -Pros: Works fine
+        -Cons: Not professional way
+        -So what now?: Use method 2
+    2. CLI way
+        -Open Terminal
+        -'npm init -y'
+            ->creates 'package.json'
+        -'npm install tailwindcss @tailwindcss/cli'
+            ->node modules added
+            ->in package.json , dev dependencies added
+            ->remember to add node modules in .gitignore
+        -create 'inputs.css' and write
+            ->@import "tailwindcss";
+        -run 'npx @tailwindcss/cli -i ./src/input.css -o ./src/output.css --watch'
+            -> be sure replace file path 
+        -done -->
+
+
+    <h1 class="underline bg-orange-400 center border">Hello World</h1>
+</body>
+
+</html>

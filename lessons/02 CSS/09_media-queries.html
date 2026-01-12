@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Media Queries</title>
+
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            background-color: #333;
+            color: #fff;
+            height: 100vh;
+            display: flex;
+            align-items: center;
+            justify-content: center
+        }
+
+        .responsive-div {
+            width: 100%;
+            background-color: blueviolet;
+            font-size: 26px;
+            padding: 13px;
+        }
+
+        @media (max-width: 768px) {                /* we have '(min-width)' too */
+            body {
+                align-items: flex-start
+            }
+
+            .responsive-div {
+                background-color: aquamarine;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="responsive-div">
+        This is responsive.
+    </div>
+</body>
+</html>

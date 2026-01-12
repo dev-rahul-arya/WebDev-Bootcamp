@@ -1,4 +1,5 @@
 # Ignore all PDF & MP4 Files
 *.pdf
 *.mp4
-./vscode
+/.vscode
+/node_modules
