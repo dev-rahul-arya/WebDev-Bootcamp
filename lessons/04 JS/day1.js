@@ -39,7 +39,8 @@ let num = "100aa";
 console.log(num);
 console.log(typeof num);
 
-let numTemp = Number(num);     :::: changes string->number
+let numTemp = Number(num);     :::: changes string -> number
+let tempNum = new Number(102);     :::: changes to objects
 console.log(typeof numTemp);
 console.log(numTemp);          :::: return NaN
 
@@ -62,13 +63,16 @@ console.log(1 + "2");        //"12"
 console.log("1" + 2 + 2);    //"122"
 console.log(1 + 2 + "2");    //"32"
 
-value++;  //Increment Operator
+value++;  //Increment Operator (POST & PRE also available)
 console.log(value);
 
 Comparision : >, <, >=, <=, ==, !=, ===
 FUN FACT: 
 1. Comparison operators convert 'null' to a number , i.e. 0
 2. Same case with 'undefined', but on every comparision it returns false
+
+Conditional : &&, ||, !
+Short-hand notations : +=, *=, etc.
 
 */
 
