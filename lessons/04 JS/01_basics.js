@@ -59,6 +59,11 @@ let sm1 = Symbol("John") //named symbol
 let sm2 = Symbol() //unnamed symbol
 
 
+// Ternary Operator 
+function compare(a, b) {
+    return (a > b) ? (a - b) : (b - a);      // (condition) ? 'if true' : 'if false' ;
+}
+
 // Intresting
 console.log(Number(undefined)); //returns NaN
 console.log(Number(NaN)); //returns 0
