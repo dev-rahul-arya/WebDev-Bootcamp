@@ -181,7 +181,7 @@ arr.forEach(element => {
 
 console.log(availableTeas);
 
-// FUN FACT : Why return didn't stoped whole code block? -> because take a closer look you will see in reality that 4 functions (i.e., no. of elements in the array) are called, and only one out of 4 function terminated with that rerurn statement. 
+// FUN FACT : Why return didn't stoped whole code block? -> because take a closer look you will see in reality that 4 functions (i.e., no. of elements in the array) are called, and only one out of 4 function terminated with that return statement. 
 
 
 // Q13. Write a 'forEach' loop that iterates through the array ["earl grey", "green tea", "chai", "oolong tea"]. Ignore the loop when "chai" is found, and store all previous tea types in an array named 'availableTeas'. 

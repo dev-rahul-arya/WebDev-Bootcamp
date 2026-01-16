@@ -41,7 +41,7 @@ let user = {firstname: "John", lastname: "Doe"}
 
 
 let num = 102;
-let tempNum = new Number(102);
+let tempNum = new Number(102); //conversion of one data type to another
 
 console.log(typeof num);
 console.log(typeof tempNum);

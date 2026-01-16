@@ -28,7 +28,7 @@ console.log(today.getDate()); //try all
 
 // Array
 // n-D array also available
-// first elememts should be string
+// first elememts should be string for heterogenous datatype array
 
 let anotherUser = ["Alice", true];
 console.log(anotherUser);
