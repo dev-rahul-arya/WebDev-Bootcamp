@@ -1,0 +1,248 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Basics</title>
+
+    <style>
+        /* * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        } */
+
+        body {
+            background-color: #333;
+            color: #fff;
+            text-align: center;
+        }
+
+        .highlight {
+            background-color: yellow;
+            font-weight: bold;
+            color: #1a1a1a;
+        }
+
+        .hidden {
+            display: none;
+        }
+    </style>
+</head>
+
+<body>
+    <!-- Example1: Accessing DOM Elements  -->
+    <hr>
+    <hr>
+    <section id="example-1">
+        <h2>Accesisng DOM Elements</h2>
+        <p id="myParagraph">
+            This is a paragraph. Click the button to change me.
+        </p>
+        <button id="changeTextButton">Change Text</button>
+    </section>
+
+    <!-- Example 2: Traversing the DOM  -->
+    <hr>
+    <hr>
+    <section id="example-2">
+        <h2>Traversing the DOM</h2>
+        <ul id="citiesList">
+            <li>New York</li>
+            <li>Tokyro</li>
+            <li>Paris</li>
+            <li>London</li>
+        </ul>
+        <button id="highlightFirstCity">Highlight First City</button>
+    </section>
+
+    <!-- Example 3: Manipulating DOM elements  -->
+    <hr>
+    <hr>
+    <section id="example-3">
+        <h2>Manipulating DOM element</h2>
+        <div id="coffeeOrder">Order: <span id="coffeeType">Latte</span></div>
+        <button id="changeOrder">Change to Espresso</button>
+    </section>
+
+    <!-- Example 4: Creating and Inserting Elements  -->
+    <hr>
+    <hr>
+    <section id="example-4">
+        <h2>Creating and Inserting Elements</h2>
+        <ul id="shoppingList">
+            <li>Bread</li>
+            <li>Milk</li>
+        </ul>
+        <button id="addNewItem">Add a New Item</button>
+    </section>
+
+
+    <!-- Example 5: Removing DOM Element  -->
+    <hr>
+    <hr>
+    <section id="example-5">
+        <h2>Removing DOM Elements</h2>
+        <ul id="taskList">
+            <li>Task 1</li>
+            <li>Task 2</li>
+            <li>Task 3</li>
+        </ul>
+        <button id="removeLastTask">Remove Last Task</button>
+    </section>
+
+
+    <!-- Example 6: Event Handling in the DOM -->
+    <hr>
+    <hr>
+    <section id="example-6">
+        <h2>Event Handling in the DOM</h2>
+        <button id="clickMeButton">Click Me!</button>
+    </section>
+
+
+    <!-- Example 7: Event Delegation  -->
+    <hr>
+    <hr>
+    <section id="example-7">
+        <h2>Event Delegation</h2>
+        <ul id="teaList">
+            <li class="teaItem">Grean Tea</li>
+            <li class="teaItem">Black Tea</li>
+            <li class="teaItem">Oolong Tea</li>
+        </ul>
+        <p>Hover on any tea to highlight it</p>
+    </section>
+
+
+    <!-- Example 8: Form Handling -->
+    <hr>
+    <hr>
+    <section id="example-8">
+        <h2>Form Handling</h2>
+        <form id="feedbackForm">
+            <label for="feedbackInput">Your Feedback: </label>
+            <input type="text" id="feedbackInput" placeholder="Enter Feedback">
+            <button type="submit">Submit Feedback</button>
+        </form>
+
+        <p id="feedbackDisplay"></p>
+    </section>
+
+
+    <!-- Example 9: DOM Content Loaded -->
+    <hr>
+    <hr>
+    <section id="example-9">
+        <h2>DOM Content Loaded</h2>
+        <p id="domStatus">Watiting for DOM to load...</p>
+    </section>
+
+
+    <!-- Example 10: CSS Classes Manipulation -->
+    <hr>
+    <hr>
+    <section id="example-10">
+        <h2>CSS Classes Manipulation</h2>
+        <p id="descriptionText">This text will change color!</p>
+        <button id="toggleHighlight">Toggle Highlight</button>
+    </section>
+    <hr>
+    <hr>
+
+
+    <script>
+
+
+        //let hold = document.getElementById("changeTextButton");
+        // console.log(hold);  //gives element
+
+        // Example 1
+        document.getElementById("changeTextButton").addEventListener("click", function () {
+            // console.log(this); //gives element 'button'
+            // console.log(document.getElementById("myParagraph")); //gives element 'paragraph'
+            // console.log(document.getElementById("myParagraph").textContent); //gives content 'paragraph'
+
+            document.getElementById("myParagraph").textContent = "The paragraph is changed.";
+        })
+
+        // Example 2
+        document.getElementById("highlightFirstCity").addEventListener("click", function () {
+            document.getElementById("citiesList").firstElementChild.classList.add("highlight");  //added a class via JS
+        })
+
+
+        // Example 3
+        document.getElementById("changeOrder").addEventListener("click", function () {
+            document.getElementById("coffeeType").textContent = "Espresso";
+
+            document.getElementById("coffeeType").style.backgroundColor = "brown"; //changing CSS via JS (one property per line)
+        })
+
+
+        // Example 4
+        document.getElementById("addNewItem").addEventListener("click", function () {
+            let element = document.createElement("li");  //element creation
+            element.textContent = "Eggs";  //element creation and updation can't be on the same line, that's why did this
+
+            document.getElementById("shoppingList").appendChild(element);
+        })
+
+
+        // Example 5
+        document.getElementById("removeLastTask").addEventListener("click", function () {
+            document.getElementById("taskList").lastElementChild.remove();
+        })
+
+
+        // Example 6
+        document.getElementById("clickMeButton").addEventListener("click", function () {   //click, mouseover, dblclick, keyP, keyDown, etc.
+            alert("Hey!!!");
+        })
+
+
+        // Example 7
+        document.getElementById("teaList").addEventListener("mouseover", function (event) {
+            if (event.target && event.target.matches(".teaItem")) {
+                // console.log(event.target); //gets element
+
+                event.target.classList.add("highlight");
+            }
+        })
+
+
+        // Example 8
+        document.getElementById("feedbackForm").addEventListener("submit", function (event) {
+            event.preventDefault();  //opposes default behaviuor of 'submit'
+
+            let content = document.getElementById("feedbackInput").value;
+
+            document.getElementById("feedbackDisplay").textContent = `Feedback is: ${content}`;
+        })
+
+
+        // Example 9
+        document.addEventListener("DOMContentLoaded", function name() {
+            document.getElementById("domStatus").textContent = "DOM fully loaded.";
+        })
+
+        // Example 10
+        document.getElementById("toggleHighlight").addEventListener("click", function () {
+            let flag = document.getElementById("descriptionText").classList.contains("highlight");
+
+            if (!flag) {
+                document.getElementById("descriptionText").classList.add("highlight")
+            } else {
+                document.getElementById("descriptionText").classList.remove("highlight");
+            }
+
+            //modern way
+            // document.getElementById("descriptionText").classList.toggle("highlight");
+        })
+
+
+    </script>
+</body>
+
+</html>

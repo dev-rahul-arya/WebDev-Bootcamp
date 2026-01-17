@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Basics</title>
+
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            background-color: #333;
+            color: #fff;
+        }
+    </style>
+</head>
+
+<body>
+    <h1>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Laborum at dignissimos voluptate.</h1>
+
+    
+    <script src="#"></script>
+    <script>
+        // Everthing is in a window. A window consists of DOM, BOM, JS
+        // DOCUMENT OBJECT MODEL(DOM) -> elements
+        // BOX OBJECT MODEL(BOM) -> screen, navigator, location, etc.
+        // JAVSCRIPT(JS) -> objects, arrays, functions, classes, etc.
+
+
+
+        console.log("Hello from script");
+
+        // BOM - check more on MDN reference
+        // window.outerWidth  //screen width
+        // window.outerHeight  //screen height
+
+        // navigator.userAgent  //OS info, browser info
+        // location.hostname  //ip
+        // location.href //full url
+        // location.port //port
+
+        // DOM
+        console.log(document.firstChild); // <!DOCTYPE html>
+        console.log(document.getElementsByTagName("h1"));
+
+        alert("JS File connected");
+    </script>
+</body>
+
+</html>
