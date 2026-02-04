@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DOM</title>
+
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            background-color: #333;
+            color: #fff;
+        }
+    </style>
+</head>
+<body>
+    <div>
+        <h1 id="firstheading" class="heading">DOM Learning</h1>
+        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Tempora architecto voluptate totam?</p>
+    </div>
+
+    <div class="parent">
+        <div class="day">Monday</div>
+        <div class="day">Tuesday</div>
+        <div class="day">Wednesday</div>
+        <div class="day">Thursday</div>
+        <div class="day">Friday</div>
+    </div>
+
+    <script>
+        document.getElementById("firstheading").getAttribute('id');  //returns id
+        document.getElementById("firstheading").getAttribute('class');  //returns class
+
+        document.getElementById("firstheading").setAttribute('class', 'addNewClassNameHere class 2 class3') //overwrites existing class
+        document.getElementById("firstheading").style.backgroundColor = "orange";
+        document.getElementById("firstheading").style.padding = "4px";
+
+        document.getElementById("firstheading").innerHTML;  //hrml content inside selected element
+        document.getElementById("firstheading").innerText;  //only visible text
+        document.getElementById("firstheading").textContent;  //also gives the conetent which is set 'display: none;' too
+
+        document.querySelector('h1');  //return 1st element
+        document.querySelector('#firstheading');  
+        const heading = document.querySelector('.heading');
+        // heading.textContent = 'DOM Learning (Injected via JS)';
+        
+        document.querySelector('li');  //first element selected
+        document.querySelectorAll('li');  //every element selected
+
+        const parent = document.querySelector('.parent');
+        parent.children[1].textContent = "Sunday :)";
+        console.log(parent.firstElementChild);
+        console.log(parent.lastElementChild);
+
+        const day = document.querySelector('.day');
+        console.log(day.parentElement);
+        console.log(day.nextElementSibling);
+
+        console.log("NODES: ", parent.childNodes);
+        //Timestamp: 1:17:00
+    </script>
+</body>
+</html>
