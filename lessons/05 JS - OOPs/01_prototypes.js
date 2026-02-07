@@ -17,7 +17,7 @@ let tomHardware = {};
 console.log(computer);
 console.log(lenovo);
 console.log(lenovo.__processor__); //'computer' being accessed by 'lenovo'
-console.log(lenovo.__processor__.cpu); //'computer' being accessed by 'lenovo'
+console.log(lenovo.__processor__.cpu); //'cpu' being accessed by 'lenovo'
 console.log();
 
 

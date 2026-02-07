@@ -1,0 +1,163 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ToDo App</title>
+
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+        }
+
+        body {
+            background-color: #333;
+            color: #fff;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            height: 100vh;
+        }
+
+        button {
+            padding: 8px;
+            background-color: red;
+            color: #fff;
+            border: none;
+            border-radius: 8px;
+            cursor: pointer;
+        }
+
+        .container {
+            background-color: #444444;
+            padding: 12px;
+            border-radius: 8px;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            width: 55vw;
+            gap: 12px;
+        }
+
+        .addContainer {
+            width: 100%;
+            display: flex;
+            align-items: center;
+            gap: 4px;
+        }
+
+        .todos {
+            width: 100%;
+        }
+
+        .todos li {
+            list-style: none;
+            display: flex;
+            /* width: 100%; */
+            align-items: center;
+            justify-content: space-between;
+            background-color: #555;
+            margin: 4px;
+            padding: 8px;
+            border-radius: 8px;
+        }
+
+        #inputTodo {
+            padding: 8px;
+            outline: none;
+            border: none;
+            border-radius: 8px;
+            background-color: #555;
+            color: #fff;
+            width: 75%;
+        }
+
+        #addTodo {
+            background-color: purple;
+            width: 25%;
+        }
+
+        .completed {
+            display: none;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="container">
+        <h1>ToDo List</h1>
+
+        <div class="addContainer">
+            <input type="text" name="ToDo" id="inputTodo" placeholder="Add new ToDo">
+            <button id="addTodo">Add</button>
+        </div>
+
+        <ul class="todos">
+            <li>
+                Todo 1
+                <button id="rmTodo">Delete</button>
+            </li>
+            <li>
+                Todo 2
+                <button id="rmTodo">Delete</button>
+            </li>
+        </ul>
+    </div>
+
+    <script>
+        document.addEventListener("DOMContentLoaded", () => {
+            // Tasks
+            // let task = document.getElementById("inputTodo");
+            let tasks = JSON.parse(localStorage.getItem("tasks")) || [];  //if something in localStorage good otherwise go with empty array
+            tasks.forEach((task) => renderTasks(task)); //loops through every todo
+
+            // Add Todo
+            document.getElementById("addTodo").addEventListener("click", function () {
+                let taskText = document.getElementById("inputTodo").value.trim();
+                if (taskText === "") return;
+
+                const newTask = {
+                    id: Date.now(),  //unique id generated
+                    text: taskText,
+                    isCompleted: false,
+                }
+                tasks.push(taskText);
+                saveTask();
+                renderTasks(newTask);
+                document.getElementById("inputTodo").value = "";   //clears the value
+            })
+
+
+            function saveTask() {
+                localStorage.setItem("tasks", JSON.stringify(tasks));  //stringify-> converts to string ; parse-> converts to original
+            }
+
+            function renderTasks(task) {
+                const li = document.createElement("li");
+                li.setAttribute("data-id", task.id);
+                if (task.completed) li.classList.add("completed");
+                li.innerHTML = `
+                <span>${task.text}</span>
+                <button>Delete</button>
+                `
+
+                document.getElementById("todos").appendChild(li);
+            }
+
+
+            // Delete Todo
+            document.getElementById("rmTodo").addEventListener("click", function () {
+                tasks = tasks.filter((t) => t.id !== task.id);  //filters returns only when condition is true
+                li.remove();
+                saveTask();
+            });
+        });
+    </script>
+</body>
+
+</html>
