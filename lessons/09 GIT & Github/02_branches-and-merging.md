@@ -22,10 +22,14 @@ User configs like name, email, siginkey, gpg, etc. are stored here.
 ```git
 git branch
 ```
-
 ## Creating a branch
 ```git
-git branch -M "feat/NavBar"
+git branch beta
+```
+
+## Renaming a branch
+```git
+git branch -M main
 ```
 
 ## Switching to a branch
