@@ -1,7 +1,7 @@
 // Encapsulation: You just box them around so that they stay together and nobody outside knows what happens here.
 // Inheritance: Whatever you get from other guys.
 // Polymorphism: The ability of something to have or to be displayed in more than one form.
-// Abstraction: 
+// Abstraction: It hides the complex implementation detail.
 
 
 // 'Classes' are like 'Structures' in 'C Language', yes you can define variabls inside it but generally we use then to define functions inside them.
