@@ -104,10 +104,11 @@ BEGIN;
 
 SAVEPOINT savepoint1;
 
-INSERT INTO products (name, price, stock) 
+INSERT INTO products (name, price, stock)
 VALUES ("Jeans", 2300.00, 2);
 
 -- IF ALL OK
+COMMIT;
 
 -- IF SOME PROBLEM
 ROLLBACK TO savepoint1;
@@ -119,4 +120,4 @@ DTOs in SQL refer to objects or structures used to transfer data between differe
 
 ## DQL - DATA QUERY LANGUAGE
 
-DQL is often considered a part of DML, specifically focusing on queries that retrieve data from the databse. SELECT is the only DQL command.
+DQL is often considered a part of DML, specifically focusing on queries that retrieve data from the databse. `SELECT` is the only DQL command.
